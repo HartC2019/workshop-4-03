@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import PlantList from "./components/PlantList";
 import Cart from "./components/Cart";
 import { useState } from "react";
+import "./App.css";
 
 export default function App() {
   const [cart, setCart] = useState([]);
@@ -27,11 +28,32 @@ export default function App() {
     });
   }
 
+  function updateQuantity(id, change) {
+    setCart((previousCart) => {
+      const updatedCart = previousCart.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            quantity: item.quantity + change,
+          };
+        } else {
+          return item;
+        }
+      });
+
+      return updatedCart.filter((item) => {
+        return item.quantity > 0;
+      });
+    });
+  }
+
   return (
     <main className="app">
       <Header />
-      <PlantList plants={PLANTS} addToCart={addToCart} />
-      <Cart cart={cart} />
+      <section className="content">
+        <PlantList plants={PLANTS} addToCart={addToCart} />
+        <Cart cart={cart} updateQuantity={updateQuantity} />
+      </section>
     </main>
   );
 }

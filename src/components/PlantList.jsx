@@ -1,5 +1,6 @@
 import PLANTS from "../data";
 import PlantCard from "./PlantCard";
+import "./PlantList.css";
 
 export default function PlantList({ plants, addToCart }) {
   console.log("plants in list:", plants);

@@ -1,0 +1,44 @@
+.cart-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+.cart-item p:first-child {
+  font-size: 1.5rem;
+}
+
+.cart-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-buttons button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.cart-buttons p {
+  min-width: 20px;
+  text-align: center;
+}

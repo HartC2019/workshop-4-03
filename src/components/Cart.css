@@ -1,0 +1,11 @@
+.cart {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  top: 2rem;
+}
+
+.cart h2 {
+  color: #7bd88f;
+  margin-bottom: 1rem;
+}

@@ -1,14 +1,15 @@
-export default function CartItem({ item }) {
+import "./CartItem.css";
+
+export default function CartItem({ item, updateQuantity }) {
   return (
     <article className="cart-item">
       <div>
-        <h2>Cart</h2>
         <p>{item.image}</p>
         <p>{item.name}</p>
         <div className="cart-buttons">
-          <button>-</button>
+          <button onClick={() => updateQuantity(item.id, -1)}>-</button>
           <p>{item.quantity}</p>
-          <button>+</button>
+          <button onClick={() => updateQuantity(item.id, 1)}>+</button>
         </div>
       </div>
     </article>

@@ -1,3 +1,16 @@
 .list {
-  width: fit-content;
+  width: 100%;
+}
+
+.list h2 {
+  color: #7bd88f;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.plants-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
 }

@@ -1,0 +1,8 @@
+.card {
+  border: 2px, solid, gray;
+  width: fit-content;
+}
+
+.image {
+  font-size: 4rem;
+}
